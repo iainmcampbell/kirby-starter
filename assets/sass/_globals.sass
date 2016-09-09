@@ -1,0 +1,28 @@
+
+$blue: #45aaff
+$dark: #222
+$medium: #999
+$light: #ddd
+
+
+
+=breakpoint($point)
+  @if #{$point} == "huge"
+    @media (min-width: 1200px)
+      @content
+
+  @else if #{$point} == "large"
+    @media (min-width: 900px) and (max-width: 1200px)
+      @content
+
+  @else if #{$point} == "medium"
+    @media (min-width: 600px) and (max-width: 900px)
+      @content
+
+  @else if #{$point} == "small"
+    @media (max-width: 600px)
+      @content
+    @media only screen and (max-device-width: 500px) and (orientation: portrait)
+      @content
+    @media only screen and (min-device-height: 300px) and (max-device-height: 700px) and (orientation: landscape)
+      @content

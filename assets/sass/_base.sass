@@ -1,0 +1,148 @@
+*
+  margin: 0
+  padding: 0
+  border: 0
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+  box-sizing: border-box
+  &:before, &:after
+    margin: 0
+    padding: 0
+    border: 0
+    -webkit-box-sizing: border-box
+    -moz-box-sizing: border-box
+    box-sizing: border-box
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary
+  display: block
+
+img
+  display: block
+  max-width: 100%
+
+html
+  font-family: sans-serif
+  height: 101%
+  -webkit-text-size-adjust: 100%
+  -ms-text-size-adjust: 100%
+
+body
+  margin: 0 auto
+  font-size: 1em
+  line-height: 1.5em
+  padding: 1em
+  max-width: 70em
+  background: #fff
+  color: $dark
+
+  @include breakpoint(medium)
+    font-size: 1em
+    padding: 3em
+
+// Typography
+// ********************************************************
+
+a
+  color: #000
+  text-decoration: none
+  // transition: color .2s, background .2s, border .2s
+
+  &:hover
+    color: $blue
+
+h1
+  font-size: 2em
+  line-height: 1.25em
+  font-weight: 400
+  margin-bottom: .5em
+
+h2
+  font-size: 1.6em
+  line-height: 1.25em
+  font-weight: 400
+  margin-bottom: .5em
+
+h3
+  font-size: 1.4em
+  line-height: 1.5em
+  font-weight: 400
+  margin-bottom: .5em
+
+h4
+  font-size: 1.125em
+  font-weight: 600
+  line-height: 1.5em
+  margin-bottom: 0
+
+h1 a, h2 a, h3 a, h4 a
+  color: inherit
+  border: 0 !important
+
+
+// Grid
+// ********************************************************
+
+$col-padding: 2em
+
+.gs-major, .gs-minor, .col
+  display: inline-block
+  vertical-align: top
+
+.gs
+  margin-left: -$col-padding
+
+  // 3-2-1 columns
+  .gs-major
+    padding-left: $col-padding
+    width: 100%
+    @include breakpoint(huge)
+      width: 75%
+    @include breakpoint(large)
+      width: 66%
+    @include breakpoint(medium)
+      width: 50%
+
+    .col
+      width: 100%
+      padding-left: $col-padding
+      max-width: 400px
+
+      @include breakpoint(huge)
+        width: 33%
+      @include breakpoint(large)
+        width: 50%
+      @include breakpoint(medium)
+        width: 100%
+
+
+  // 1 column
+  .gs-minor
+    padding-left: $col-padding
+    width: 100%
+    @include breakpoint(huge)
+      width: 25%
+    @include breakpoint(large)
+      width: 33%
+    @include breakpoint(medium)
+      width: 50%
+
+    .col
+      width: 100%
+      padding-left: $col-padding
+      max-width: 400px
+
+
+// 4 columns
+.gs-full
+  width: 100%
+  margin-left: -$col-padding
+  .col
+    width: 100%
+    padding-left: $col-padding
+    max-width: 400px
+    @include breakpoint(huge)
+      width: 25%
+    @include breakpoint(large)
+      width: 33%
+    @include breakpoint(medium)
+      width: 50%

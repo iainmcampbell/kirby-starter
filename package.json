@@ -1,0 +1,28 @@
+{
+  "name": "skyezhang-2",
+  "version": "1.0.0",
+  "description": "Kirby is a file-based CMS. Easy to setup. Easy to use. Flexible as hell.",
+  "main": "index.js",
+  "scripts": {
+    "start": "open http://localhost:8000 && php -S 127.0.0.1:8000"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@bitbucket.org:iainmcampbell/skyezhang-2.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^2.3.1",
+    "gulp-livereload": "^3.8.0",
+    "gulp-plumber": "^1.0.1",
+    "gulp-sass": "^2.0.4",
+    "gulp-sourcemaps": "^1.5.2",
+    "gulp-util": "^3.0.6",
+    "tiny-lr": "^0.1.6"
+  },
+  "dependencies": {
+    "gulp-connect-php": "0.0.8"
+  }
+}
